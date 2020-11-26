@@ -1,0 +1,27 @@
+show databases;
+use test;
+
+
+/*This is not used*/
+create table emp_java(name varchar(20),id decimal(10,0), conf varchar(20));
+desc emp_java;
+delete from emp_java;
+select * from emp_java;
+/* This is not used*/
+
+
+/*Project Tables Admin Module*/
+create table hod(name varchar(50),hodid varchar(20) primary key, year integer, semester integer, branch varchar(50), phno bigint, email varchar(50), password varchar(50));
+desc hod;
+delete from hod;
+drop table hod;
+select * from hod;
+desc hod;
+create table admin(name varchar(50), id varchar(50) primary key, username varchar(50), password varchar(50));
+
+update hod set year=2;
+update hod set password="newpass" where hodid="51IT";
+
+desc admin;
+select * from admin;
+insert into admin values("Harsh Dixit","1","admin47","passsme");
